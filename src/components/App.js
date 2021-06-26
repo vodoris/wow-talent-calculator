@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './Header';
 import {
@@ -13,7 +13,6 @@ import {
   Warrior
 } from './index';
 
-
 const App = () => {
   const jobs = [
     { name: 'druid', component: Druid },
@@ -26,14 +25,6 @@ const App = () => {
     { name: 'warlock', component: Warlock },
     { name: 'warrior', component: Warrior }
   ];
-
-  // const [activeJob, setActiveJob] = useState(null);
-
-  // const handleSelectedJob = (job) => {
-  //   console.log(job);
-  //   setActiveJob(job)
-  // }
-
   return (
     <div className="ui container">
       <BrowserRouter>
@@ -42,14 +33,18 @@ const App = () => {
           {
             jobs.map(job => {
               return (
-                <Route key={job.name} path={`/class/${job.name}`} exact component={job.component} />
+                <Route
+                  key={job.name}
+                  exact
+                  path={`/class/${job.name}`}
+                  component={job.component} />
               );
             })
           }
         </div>
       </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
 export default App;

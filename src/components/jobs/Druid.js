@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Druid = () => {
+const Druid = (props) => {
   return (
     <div>Druid</div>
   );
