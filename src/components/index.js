@@ -1,0 +1,9 @@
+export { default as Druid } from './jobs/Druid';
+export { default as Hunter } from './jobs/Hunter';
+export { default as Mage } from './jobs/Mage';
+export { default as Paladin } from './jobs/Paladin';
+export { default as Priest } from './jobs/Priest';
+export { default as Rogue } from './jobs/Rogue';
+export { default as Shaman } from './jobs/Shaman';
+export { default as Warlock } from './jobs/Warlock';
+export { default as Warrior } from './jobs/Warrior';
