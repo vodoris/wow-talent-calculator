@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = ({ jobs }) => {
   const path = useLocation().pathname;
-  const [activeJob, setActiveJob] = useState(null);
-  if (activeJob === null && path !== '/') {
-    let routeJob = path.replace('/class/', '');
-    setActiveJob(jobs.find(job => job.name === routeJob));
-  }
-  const handleImgClick = (job) => {
-    setActiveJob(job);
+  let routeJob = '';
+  if (path !== '/') {
+    routeJob = path.slice(7);
   }
 
   return (
@@ -21,8 +17,7 @@ const Header = ({ jobs }) => {
               <div className="column" key={job.name}>
                 <Link to={`/class/${job.name}`} className="item">
                   <img
-                    onClick={() => handleImgClick(job)}
-                    className={`ui medium ${activeJob === job ? 'circular' : 'disabled'} image`}
+                    className={`ui medium ${routeJob === job.name ? 'circular' : 'rounded disabled'} image`}
                     alt={`${job.name}`}
                     src={`${process.env.PUBLIC_URL}/assets/${job.name}.png`}
                   />
