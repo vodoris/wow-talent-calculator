@@ -1,0 +1,17 @@
+body {
+  background-color: grey;
+}
+
+img.circular {
+  border-radius: 50px;
+}
+
+img.disabled {
+  opacity: 0.3;
+}
+
+button.talent {
+  padding: 20px;
+  margin: 0px 4px;
+  border: 2px solid white;
+}

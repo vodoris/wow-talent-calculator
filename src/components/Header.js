@@ -9,15 +9,15 @@ const Header = ({ jobs }) => {
   }
 
   return (
-    <div className="ui stackable nine column stackable grid">
+    <div className="container">
       <div className="row">
         {
           jobs.map(job => {
             return (
-              <div className="column" key={job.name}>
+              <div className="col" key={job.name}>
                 <Link to={`/class/${job.name}`} className="item">
                   <img
-                    className={`ui medium ${routeJob === job.name ? 'circular' : 'rounded disabled'} image`}
+                    className={`img-fluid ${routeJob === job.name ? 'circular' : 'rounded disabled'}`}
                     alt={`${job.name}`}
                     src={`${process.env.PUBLIC_URL}/assets/${job.name}.png`}
                   />

@@ -26,7 +26,7 @@ const App = () => {
     { name: 'warrior', component: Warrior }
   ];
   return (
-    <div className="ui container">
+    <div className="container">
       <BrowserRouter>
         <div>
           <Header jobs={jobs} />
