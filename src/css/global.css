@@ -15,3 +15,7 @@ button.talent {
   margin: 0px 4px;
   border: 2px solid white;
 }
+
+span.talent-badge {
+  top: 30px !important;
+}
